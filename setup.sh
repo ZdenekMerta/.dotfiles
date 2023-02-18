@@ -41,8 +41,14 @@ install_homebrew() {
   fi
 }
 
+install_git() {
+  info "Installing Git"
+  brew install git
+}
+
 info "####### dotfiles #######"
 read -p "Press enter to start:"
 
 install_xcode
 install_homebrew
+install_git
