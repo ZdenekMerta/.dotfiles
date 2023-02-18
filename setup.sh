@@ -46,9 +46,16 @@ install_git() {
   brew install git
 }
 
+clone_dotfiles_repository() {
+  info "Cloning .dotfiles repository into $HOME/.dotfiles"
+  git clone https://github.com/ZdenekMerta/.dotfiles.git "$HOME/.dotfiles"
+}
+
 info "####### dotfiles #######"
 read -p "Press enter to start:"
 
 install_xcode
 install_homebrew
 install_git
+
+clone_dotfiles_repository
