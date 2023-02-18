@@ -47,8 +47,11 @@ install_git() {
 }
 
 clone_dotfiles_repository() {
-  info "Cloning .dotfiles repository into $HOME/.dotfiles"
-  git clone https://github.com/ZdenekMerta/.dotfiles.git "$HOME/.dotfiles"
+  REPO_PATH="$HOME/.dotfiles"
+
+  info "Cloning .dotfiles repository into $REPO_PATH"
+  git clone https://github.com/ZdenekMerta/.dotfiles.git "$REPO_PATH"
+  cd "$REPO_PATH" >/dev/null
 }
 
 info "####### dotfiles #######"
