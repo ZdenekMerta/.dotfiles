@@ -54,6 +54,12 @@ clone_dotfiles_repository() {
   git clone "$REPOSITORY_URL" "$REPOSITORY_PATH"
 }
 
+setup() {
+  info "Running setup"
+  cd "$REPOSITORY_PATH/setup" >/dev/null
+  ./setup.sh
+}
+
 info "####### dotfiles #######"
 read -p "Press enter to start:"
 
@@ -62,3 +68,5 @@ install_homebrew
 install_git
 
 clone_dotfiles_repository
+
+setup
