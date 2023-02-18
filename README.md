@@ -2,8 +2,8 @@
 
 ## Installation
 
-Run the `setup` script.
+Run the `init` script.
 
 ``` bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ZdenekMerta/.dotfiles/HEAD/setup.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ZdenekMerta/.dotfiles/HEAD/init.sh)"
 ```
