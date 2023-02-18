@@ -2,6 +2,9 @@
 
 set -o errexit
 
+REPOSITORY_URL=https://github.com/ZdenekMerta/.dotfiles.git
+REPOSITORY_PATH="$HOME/.dotfiles"
+
 reset_color=$(tput sgr 0)
 
 info() {
@@ -47,11 +50,8 @@ install_git() {
 }
 
 clone_dotfiles_repository() {
-  REPO_PATH="$HOME/.dotfiles"
-
-  info "Cloning .dotfiles repository into $REPO_PATH"
-  git clone https://github.com/ZdenekMerta/.dotfiles.git "$REPO_PATH"
-  cd "$REPO_PATH" >/dev/null
+  info "Cloning .dotfiles repository '$REPOSITORY_URL' into '$REPOSITORY_PATH'"
+  git clone "$REPOSITORY_URL" "$REPOSITORY_PATH"
 }
 
 info "####### dotfiles #######"
